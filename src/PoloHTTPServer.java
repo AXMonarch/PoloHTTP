@@ -32,14 +32,11 @@ public class PoloHTTPServer {
         if (path == null) {
             return new HTTPResponse(400, "Bad Request");
         }
-        switch (path) {
-            case "/":
-                return new HTTPResponse(200, "Welcome to the homepage!");
-            case "/about":
-                return new HTTPResponse(200, "About us page");
-            default:
-                return new HTTPResponse(404, "Page not found");
-        }
+        return switch (path) {
+            case "/" -> new HTTPResponse(200, "Welcome to the homepage!");
+            case "/about" -> new HTTPResponse(200, "About us page");
+            default -> new HTTPResponse(404, "Page not found");
+        };
     }
 
     public HashMap<String, String> parseSocketResult(ArrayList<String> socketResult)
