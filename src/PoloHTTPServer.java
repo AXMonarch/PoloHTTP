@@ -19,16 +19,12 @@ public class PoloHTTPServer {
         }
 
         private String getStatusText(int statusCode) {
-            switch (statusCode) {
-                case 200:
-                    return "OK";
-                case 400:
-                    return "Bad Request";
-                case 404:
-                    return "Not Found";
-                default:
-                    return "";
-            }
+            return switch (statusCode) {
+                case 200 -> "OK";
+                case 400 -> "Bad Request";
+                case 404 -> "Not Found";
+                default -> "";
+            };
         }
     }
 
