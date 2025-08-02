@@ -1,4 +1,4 @@
-# 🌐 PoloHTTP – A Tiny Raw Java HTTP Server
+# 🌐 PoloHTTP – A Java HTTP Server
 
 > A hand-crafted HTTP/1.0 server built from scratch in pure Java.
 
